@@ -1,4 +1,4 @@
-import { Button, Input } from "ui";
+import { Button } from "ui";
 import Pagar from "../components/Page";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { useCtx } from "../lib/Context";
@@ -21,14 +21,14 @@ export default function Docs() {
     <>
       <Button />
       <Pagar />
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           render={({ field }) => <Input {...field} />}
           {...register}
           name="name"
           control={control}
         />
-      </form>
+      </form> */}
     </>
   );
 }
