@@ -7,8 +7,9 @@ type FormValues = {
 export default function Docs() {
   return (
     <>
-      <Button />
-      <Pagar />
+      <div>
+        <p className="text-blue-500">Hai Fandy</p>
+      </div>
     </>
   );
 }
