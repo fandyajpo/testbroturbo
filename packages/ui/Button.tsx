@@ -3,5 +3,5 @@ export const Button = () => {
 };
 
 export const MoreButton = () => {
-  return <button>MoreButton</button>;
+  return <button className="bg-red-500 text-white">MoreButton</button>;
 };

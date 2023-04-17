@@ -1,8 +1,11 @@
 import { Inter } from "next/font/google";
-import { Button } from "ui";
-
+import { MoreButton } from "ui";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <Button />;
+  return (
+    <>
+      <MoreButton />
+    </>
+  );
 }
