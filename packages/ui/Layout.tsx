@@ -1,6 +1,8 @@
 import Link from "next/link";
+
 import { INavbar, ILayout, IFooter, IDrawer } from "../types/Layout";
 import GlobalProvider from "./lib/Context";
+
 export const Layout = ({
   children,
   navbar,
@@ -9,25 +11,23 @@ export const Layout = ({
   onMobileDrawer,
 }: ILayout<INavbar, IFooter, IDrawer>) => {
   return (
-    <>
-      <GlobalProvider>
-        {onMobileDrawer ? (
-          <Drawer color={drawer.color} menu={drawer.menu} />
-        ) : null}
-        <Navbar color={navbar.color} />
-        <div className="flex justify-center bg-gray-200">
-          <div
-            style={{
-              backgroundColor: "white",
-            }}
-            className="justify-center md:max-w-2xl lg:max-w-4xl xl:max-w-7xl w-screen h-fit flex flex-col items-stretch grow flex-shrink-0 gap-x-4 md:p-2 py-2"
-          >
-            {children}
-          </div>
+    <GlobalProvider>
+      {onMobileDrawer ? (
+        <Drawer color={drawer.color} menu={drawer.menu} />
+      ) : null}
+      <Navbar color={navbar.color} />
+      <div className="flex justify-center bg-gray-200">
+        <div
+          style={{
+            backgroundColor: "white",
+          }}
+          className="justify-center md:max-w-2xl lg:max-w-4xl xl:max-w-7xl w-screen h-fit flex flex-col items-stretch grow flex-shrink-0 gap-x-4 md:p-2 py-2"
+        >
+          {children}
         </div>
-        <Footer color={footer.color} />
-      </GlobalProvider>
-    </>
+      </div>
+      <Footer color={footer.color} />
+    </GlobalProvider>
   );
 };
 

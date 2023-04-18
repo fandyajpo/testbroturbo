@@ -1,29 +1,18 @@
-"use client";
+import { Suspense } from "react";
+import Loading from "./loading";
+export default async function Home() {
+  const fetcher = await fetch(
+    "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions.json",
+    {
+      method: "GET",
+    }
+  );
 
-import { useEffect } from "react";
-import { useCtx } from "ui";
-export default function Home() {
-  const { state, dispatch } = useCtx();
-  useEffect(() => {
-    console.log("HAHAHAH");
-  }, []);
+  const a = await fetcher.json();
 
   return (
-    <div className="w-full h-screen">
-      <button
-        onClick={() =>
-          dispatch({
-            type: "ID",
-            payload: {
-              id: "fasf",
-            },
-          })
-        }
-      >
-        Press
-      </button>
-      <pre>{JSON.stringify(state, null, 2)}</pre>
-      <p>Latest Next</p>
-    </div>
+    <>
+      <Suspense fallback={<Loading />}>{JSON.stringify(a, null, 2)}</Suspense>
+    </>
   );
 }
