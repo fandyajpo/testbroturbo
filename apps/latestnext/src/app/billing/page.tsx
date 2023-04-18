@@ -23,7 +23,7 @@ export default function Home() {
         Press
       </button>
       <pre>{JSON.stringify(state, null, 2)}</pre>
-      <p>Billing is enough</p>
+      <p>Latest Next</p>
     </div>
   );
 }

@@ -1,8 +1,29 @@
 "use client";
 
-import { useState } from "react";
-
+import { useEffect } from "react";
+import { useCtx } from "ui";
 export default function Home() {
-  const [s, setS] = useState(0);
-  return <div>{s}</div>;
+  const { state, dispatch } = useCtx();
+  useEffect(() => {
+    console.log("HAHAHAH");
+  }, []);
+
+  return (
+    <div className="w-full h-screen">
+      <button
+        onClick={() =>
+          dispatch({
+            type: "ID",
+            payload: {
+              id: "fasf",
+            },
+          })
+        }
+      >
+        Press
+      </button>
+      <pre>{JSON.stringify(state, null, 2)}</pre>
+      <p>More Latest</p>
+    </div>
+  );
 }
