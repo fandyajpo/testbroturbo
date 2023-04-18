@@ -1,11 +1,11 @@
-import { Inter } from "next/font/google";
-import { MoreButton } from "ui";
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <MoreButton />
+      <Link href={"/billing"}>Go</Link>
+      <div className="w-full h-screen">csacsacs</div>
+      <div className="w-full h-screen">csacsacs</div>
     </>
   );
 }
