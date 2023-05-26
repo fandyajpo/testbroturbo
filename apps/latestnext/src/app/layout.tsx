@@ -29,6 +29,7 @@ export default async function RootLayout({
             ],
           }}
           navbar={{
+            data: data,
             color: "gray",
           }}
           footer={{
