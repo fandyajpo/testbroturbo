@@ -1,4 +1,5 @@
 export interface INavbar {
+  data: any;
   color?: string;
 }
 

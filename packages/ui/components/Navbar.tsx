@@ -6,16 +6,12 @@ const Navbar = ({ color, data }: INavbar) => {
   const { state, dispatch } = useCtx();
 
   useEffect(() => {
-    if (state.id.hasOwnProperty("userId")) {
-      return null;
-    } else {
-      dispatch({
-        type: "ID",
-        payload: {
-          id: data,
-        },
-      });
-    }
+    dispatch({
+      type: "ID",
+      payload: {
+        id: data,
+      },
+    });
   }, []);
 
   return (
