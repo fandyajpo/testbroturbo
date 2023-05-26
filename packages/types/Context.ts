@@ -1,7 +1,7 @@
 import { Dispatch } from "react";
 
 export interface State {
-  id?: string;
+  id?: any;
 }
 
 export type Action = { type: "ID"; payload: State };

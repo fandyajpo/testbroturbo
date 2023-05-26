@@ -5,3 +5,6 @@ export * from "./lib/Axios";
 
 // GRID COMPONENTS
 export * as Grid from "./Grid";
+
+// TABLE
+export * from "./components/Table";

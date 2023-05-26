@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import "../../styles/global.css";
-import { Layout } from "ui";
+import { Layout, useCtx } from "ui";
 
 export const metadata: Metadata = {
   title: "Geonet",
@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Layout
+          key={"MORELATEST"}
           onMobileDrawer={true}
           drawer={{
             color: "gray",

@@ -1,9 +1,10 @@
 "use client";
+
 import { useReducer, createContext, memo, useContext, ReactNode } from "react";
 import { State, Action, GlobalContextType } from "../../types/Context";
 
 const INITIAL_STATE: State = {
-  id: "nwqfbuiwbf",
+  id: "",
 };
 
 const GlobalContext = createContext<GlobalContextType>({} as GlobalContextType);
@@ -28,6 +29,7 @@ const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>
+      {text}
       {children}
     </GlobalContext.Provider>
   );

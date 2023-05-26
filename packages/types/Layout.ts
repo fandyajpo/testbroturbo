@@ -17,6 +17,7 @@ export interface IDrawer {
 }
 
 export interface ILayout<R, F, N> {
+  menu: any;
   children: React.ReactNode;
   navbar: R;
   footer: F;
