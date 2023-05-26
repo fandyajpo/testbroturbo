@@ -29,7 +29,6 @@ const GlobalProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>
-      {text}
       {children}
     </GlobalContext.Provider>
   );
